@@ -2,7 +2,7 @@ import collections.abc
 from typing import Optional
 
 
-class BaseLoader(object):
+class BaseLoader:
     EXTENSIONS = ()
 
     def load(self, filename: str, encoding: Optional[str] = None) -> None:

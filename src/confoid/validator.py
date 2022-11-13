@@ -7,7 +7,7 @@ from . import exceptions
 
 
 class Empty:
-    def __str__(self):
+    def __str__(self) -> str:
         return "EMPTY"
 
 

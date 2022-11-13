@@ -6,6 +6,8 @@ import yaml
 from confoid import constants
 from confoid.loaders.base import BaseLoader
 
+from typing import Dict
+
 default_sep = ":"
 default_value = "N/A"
 raise_if_na = False
@@ -46,7 +48,7 @@ class YAMLLoader(BaseLoader):
             default_value = env_default_value
 
     @classmethod
-    def loader(cls, filenames: List[str], env_default_value=None):
+    def loader(cls, filenames: List[str], env_default_value=None) -> Dict[str, str]:
         data = {}
         loader = cls(env_default_value=env_default_value)
         for filename in filenames:

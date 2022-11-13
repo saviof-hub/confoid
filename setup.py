@@ -7,8 +7,8 @@ with open("README.md", "r") as fh:
 
 setup(
     name="confoid",
-    description="confoid",
-    version="0.1.0",
+    description="Configuration Management for Python.",
+    version="0.2.0",
     author="Savio Fernandes",
     author_email="savio@saviof.com",
     long_description=long_description,
@@ -32,7 +32,8 @@ setup(
             'mypy',
             'bandit',
             'pylint',
-            "twine"
+            "twine",
+            "types-PyYAML"
         ]
     },
     python_requires=">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*",

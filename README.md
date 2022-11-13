@@ -5,7 +5,7 @@ Configuration Management for Python.
 
 [![image](https://img.shields.io/pypi/v/confoid.svg)](https://pypi.org/project/confoid/)
 [![image](https://img.shields.io/pypi/pyversions/confoid.svg)](https://pypi.org/project/confoid/)
-[![GitHub license](https://img.shields.io/github/license/saviof-hub/confoid)](https://github.com/saviof-hub/confoid/blob/main/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/saviof-hub/confoid.svg)](https://github.com/saviof-hub/confoid/blob/main/LICENSE)
 
 [![GitHub Actions (Python package)](https://github.com/artbycrunk/hyper-prompt/workflows/Tests/badge.svg)](https://github.com/artbycrunk/hyper-prompt)
 
