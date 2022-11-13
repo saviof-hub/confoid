@@ -1,0 +1,9 @@
+default:
+  type: inmemory
+  redis:
+    url: redis://saviof.com
+    password: ${TEST_SERVICE_DEFAULT_PASSWORD:'test'}
+  inmemory:
+    url:
+    encoding: "utf8"
+  random: ${TEST_RANDOM}

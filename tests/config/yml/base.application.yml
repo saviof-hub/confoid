@@ -1,0 +1,9 @@
+default:
+  prefix:
+    test1: "name-test1"
+    test2: "name-test2"
+  type: inmemory
+  redis:
+    url:
+    encoding: "utf8"
+  inmemory:

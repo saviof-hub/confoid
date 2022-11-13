@@ -1,0 +1,61 @@
+[tool.coverage.run]
+branch = true
+omit = ["tests/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+exclude_lines = ["pragma: no cover"]
+
+[tool.coverage.html]
+directory = "reports/coverage_html_report"
+
+[tool.coverage.xml]
+output = "reports/coverage.xml"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+src_paths = ["isort", "test"]
+known_third_party = ["confoid", "pydantic"]
+
+[tool.pylint.'MESSAGES CONTROL']
+disable = ["missing-docstring"]
+
+[tool.mypy]
+# --strict
+disallow_any_generics = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+implicit_reexport = false
+strict_equality = true
+# --strict end
+
+[tool.pytest.ini_options]
+addopts = [
+  "--strict-config",
+  "--strict-markers",
+  "-v",
+  "--cov=src/confoid",
+  "--cov-report=xml",
+  "--cov-report=html",
+  "--cov-report=term",
+  "."
+]
+asyncio_mode = "auto"
+xfail_strict = true
+junit_family = "xunit2"
+filterwarnings = [
+    "error",
+    # TODO: needed by asyncio in Python 3.9.7 https://bugs.python.org/issue45097, try to remove on 3.9.8
+    'ignore:The loop argument is deprecated since Python 3\.8, and scheduled for removal in Python 3\.10:DeprecationWarning:asyncio',
+    "ignore:There is no current event loop:DeprecationWarning"
+]
